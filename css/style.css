@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*header*/
+
+header {
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.815);
+}
+
+.header {
+    position: fixed;
+    height: 85px;
+    box-shadow: inset 0 0 10px rgb(143, 142, 142);
+}
+
+.header .nav {
+    margin: auto;
+    text-align: center;
+}
+
+.nav {
+    width: 100%;
+    padding-bottom: 10px;
+    margin-left: 100px;
+
+}
+
+.nav .links {
+    display: inline-block;
+
+}
+
+.nav .links li {
+    float: none;
+    display: inline-block;
+    margin-top: 40px;
+
+}
+
+.nav .links li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 25px;
+    font-family: corbel;
+    font-weight: bold;
+    margin: 60px;
+
+}
+
+
+.links li:hover a {
+    color: #0b5a5b
+}
+
+.linkEquipo {
+    margin-right: 80px;
+
+}
+
+.logo img {
+    width: 150px;
+    position: absolute;
+    margin-right: 573px;
+    margin-top: 20px;
+    right: 10px;
+    top: 10px;
+
+}
+
+.logo img:hover {
+    width: 155px;
+}
+
+/*mainIndex*/
+
+main {
+    min-height: 100vh;
+    background-color: #ffffff
+}
+
+
+.sections {
+    background-image: url(../imagenesProyecto/trabajoEnEquipo2.jpg);
+    background-size: cover;
+    height: 670px;
+
+}
+
+.sections .section__text {
+    text-align: right;
+    color: #000000;
+    margin-left: 65%;
+    width: 400px;
+
+}
+
+.section__text h1 {
+    margin-top: 80px;
+    font-size: 40px;
+    font-family: corbel;
+}
+
+.section__text p {
+    font-family: corbel;
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+
+
+
+/*galeria*/
+
+.galeria {
+    width: auto;
+    height: 700px;
+}
+
+.galeria .galeria__fotos {
+    margin-top: 300px;
+
+}
+
+.galeria__fotos .galeria__uno {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.galeria__fotos .galeria__dos {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.galeria .galeria__fotos img {
+    width: 250px;
+    height: 260px;
+}
+
+
+/*seccionBeneficios*/
+
+.beneficios {
+    width: auto;
+    height: 500px;
+    background-color: #dadada
+}
+
+.beneficios .titulo__beneficios {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.titulo__beneficios h2 {
+    margin-top: 40px;
+}
+
+.parrafos {
+    font-size: 20px;
+
+}
+
+.beneficios .beneficios__iconos .parrafos .parrafos__left {
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    margin: 100px;
+    text-align: center;
+
+}
+
+.beneficios .beneficios__iconos .parrafos .parrafos__right {
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    margin: 100px;
+    text-align: center;
+}
+
+.parrafos i {
+    color: #0b5a5b;
+}
+
+/*imagenContactar*/
+
+.imagen__contactar {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenesProyecto/equipoDeTrabajo1.jpg);
+    background-size: cover;
+    background-position: top 100px;
+    height: 400px;
+
+}
+
+.imagen__contactar .imagen__texto p {
+    color: #ffffff;
+    display: inline-block;
+    margin-left: 300px;
+    margin-top: 160px;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 8px;
+    width: 850px;
+    font-family: 'Montserrat-Regular', sans-serif;
+
+}
+
+.imagen__contactar .contactar p {
+    display: inline-block;
+    background-color: #0b5a5b;
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Montserrat-Medium', sans-serif;
+    margin-left: 640px;
+    margin-top: 70px;
+    color: #ffffff;
+    box-shadow: inset 0 0 5px rgb(184, 184, 184);
+}
+
+.contactar p:hover {
+
+    background-color: #ffffff;
+    color: #0b5a5b;
+    box-shadow: inset 0 0 7px rgb(94, 93, 93);
+}
+
+/*mainContacto*/
+
+.mainContacto form {
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid white;
+}
+
+.mainContacto .formularioContact {
+    display: inline-block;
+    text-align: center;
+    margin-left: 345px;
+    margin-top: 100px;
+}
+
+/*footer*/
+
+.footer {
+    width: auto;
+    height: 110px;
+    background-color: #dadada;
+}
+
+.footer .texto__footer {
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 450px;
+}
+
+
+.logo__footer img {
+    position: absolute;
+    width: 130px;
+    margin-top: 42px;
+    margin-left: 50px;
+}
+
+.logo__footer img:hover {
+    width: 140px;
+}
+
+.footer .redes__sociales {
+    display: inline-block;
+    margin-left: 1120px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-top: 55px;
+    letter-spacing: 30px;
+    font-size: 25px;
+
+}
+
+.iconos__redes i {
+    color: rgb(0, 0, 0);
+}
+
+.iconos__redes i:hover {
+    font-size: 32px;
+    color: #0b5a5b;
+}

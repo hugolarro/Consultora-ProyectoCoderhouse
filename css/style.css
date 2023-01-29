@@ -4,274 +4,352 @@
     box-sizing: border-box;
 }
 
+/*body*/
+
+.container {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px auto 40px;
+    grid-template-areas:
+        "cabecera cabecera cabecera"
+        "main main main"
+        "abajo abajo abajo";
+}
+
+
 /*header*/
 
-header {
-    width: 100vw;
-    background-color: rgba(255, 255, 255, 0.815);
-}
 
 .header {
-    position: fixed; 
-    height: 85px;
-    box-shadow: inset 0 0 10px rgb(143, 142, 142);
-}
+    grid-area: cabecera;
 
-.header .nav {
-    margin: auto;
-    text-align: center;
-}
-
-.nav {
-    width: 100%;
-    padding-bottom: 10px;
-    margin-left: 100px;
 
 }
 
-.nav .links {
-    display: inline-block;
-
-}
-
-.nav .links li {
-    float: none;
-    display: inline-block;
-    margin-top: 40px;
-
-}
-
-.nav .links li a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 25px;
+.linkbar {
+    font-size: 22px;
     font-family: corbel;
     font-weight: bold;
-    margin: 60px;
+}
 
+.iconos__redes i {
+    color: #5a5a5a;
+}
+
+.redes__sociales {
+    letter-spacing: 10px;
+    font-size: 21px;
+}
+
+.iconos__redes i:hover {
+    font-size: 22px;
+    color: #0b5a5b;
+}
+
+.nav-item a {
+    color: #5a5a5a !important;
+}
+
+.nav-item a:hover {
+    color: #0b5a5b !important;
 }
 
 
-.links li:hover a {
-    color: #0b5a5b
+/*main index*/
+
+.main {
+    grid-area: main;
+    height: 1150px;
+    background-color: #dadada
+
+
 }
 
-.linkEquipo {
-    margin-right: 80px;
+/*main Sobre Nosotros*/
 
+.contenedorSobreNosotros {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 800px 200px;
+    grid-template-areas:
+        "superior superior superior"
+        "medio medio medio"
+        "final final final";
 }
 
-.logo img {
-    width: 150px;
+.mainSobreNos {
+    height: 1050px;
+}
+
+.banner {
+    grid-area: superior;
+    background-color: #b9b6b6;
+    text-align: center;
+}
+.banner h1 {
+    margin-top: 40px;
+}
+
+
+.imagenPresentacion {
+    grid-area: medio;
+    background-color: #107c7e;
+}
+
+.imagenPresentacion .imagen {
+background-image: url(../img/imagenPresentacion.jpg);
+height: 200px;
+background-size: cover;
+width: 100vw;
+border-width: 4px;
+    border-style: solid;
+    border-color: #dadada;
+}
+
+.parrafoPresentacion {
+    margin: 10px;
+    text-align: center;
+    color: #dadada;
+    font-weight: 20;
+}
+
+.parrafoPresentacion .spanQuienesSomos {
+    font-weight: 700;
+}
+
+.imagenFrase {
+   grid-area: final;
+   background-color: #dadada;
+}
+
+/*footerSobreNos*/
+
+.footer .logoFooter2 img {
+    width: 50px;
     position: absolute;
-    margin-right: 573px;
-    margin-top: 20px;
     right: 10px;
-    top: 10px;
-
-}
-
-.logo img:hover {
-    width: 155px;
-}
-
-/*mainIndex*/
-
-main {
-    min-height: 100vh;
-    background-color: #ffffff
+    top: 1160px;
 }
 
 
-.sections {
-    background-image: url(../imagenesProyecto/trabajoEnEquipo2.jpg);
+
+
+/*seccion Imagen y texto*/
+
+.sectionImagen {
+    background-image: url(../img/trabajoEnEquipo2.jpg);
+    height: 200px;
     background-size: cover;
-    height: 670px;
-
+    width: 100vw;
 }
 
-.sections .section__text {
-    text-align: right;
-    color: #000000;
-    margin-left: 65%;
-    width: 400px;
-
+.sectionText .section__text {
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 5px;
 }
 
 .section__text h1 {
-    margin-top: 80px;
-    font-size: 40px;
-    font-family: corbel;
-}
-
-.section__text p {
-    font-family: corbel;
-    margin-top: 8px;
     font-size: 20px;
 }
 
-/*Main Sobre Nosotros*/
-.sectionsBanner {
-    background-color: #0b5a5b;
-    position: relative;
-    top: 87px;
-    width: 100%;
-    height: 150px;
-}
-
-.sectionsBanner h1 {
-    position: absolute;
-    top: 50px;
-    left: 450px;
-    font-size: 50px;
-    color: #dadada;
-}
-
-/*seccionBeneficios*/
+/*beneficios*/
 
 .beneficios {
-    width: auto;
-    height: 500px;
-    background-color: #dadada
-}
-
-.beneficios .titulo__beneficios {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.titulo__beneficios h2 {
-    margin-top: 40px;
-}
-
-.parrafos {
-    font-size: 20px;
-
-}
-
-.beneficios .beneficios__iconos .parrafos .parrafos__left {
-    display: inline-block;
-    display: flex;
-    flex-direction: row;
-    margin: 100px;
+    margin-top: 55px;
     text-align: center;
-
+    text-decoration: overline #0b5a5b;
 }
 
-.beneficios .beneficios__iconos .parrafos .parrafos__right {
-    display: inline-block;
-    display: flex;
-    flex-direction: row;
-    margin: 100px;
+.beneficiosGrids {
+    margin: 10px;
+    margin-left: 20px;
+    position: absolute;
+    top: 400px;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    justify-content: space-between;
+    grid-gap: 10px;
     text-align: center;
+    right: 15px;
+
 }
 
-.parrafos i {
+
+.beneficiosGrids i {
     color: #0b5a5b;
+    letter-spacing: 2px;
 }
 
-/*imagenContactar*/
 
-.imagen__contactar {
+/*seccion contactar*/
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenesProyecto/equipoDeTrabajo1.jpg);
+.imagenContactar {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/equipoDeTrabajo1.jpg);
     background-size: cover;
-    background-position: top 100px;
-    height: 400px;
-
+    position: relative;
+    top: 590px;
+    
+    height: 200px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #0b5a5b;
 }
 
-.imagen__contactar .imagen__texto p {
-    color: #ffffff;
-    display: inline-block;
-    margin-left: 300px;
-    margin-top: 160px;
-    font-size: 30px;
+.textoContactar {
+    color: rgb(235, 235, 235);
+    position: relative;
+    top: 65px;
     text-align: center;
-    letter-spacing: 8px;
-    width: 850px;
-    font-family: 'Montserrat-Regular', sans-serif;
-
+    font-size: 16px;
 }
 
-.imagen__contactar .contactar p {
+.botonContactar p {
     display: inline-block;
     background-color: #0b5a5b;
-    font-size: 20px;
-    padding: 10px;
-    font-family: 'Montserrat-Medium', sans-serif;
-    margin-left: 640px;
-    margin-top: 70px;
-    color: #ffffff;
-    box-shadow: inset 0 0 5px rgb(184, 184, 184);
+    color: #fff;
+    position: relative;
+    padding: 2px;
+    box-shadow: inset 0 0 1px rgb(184, 184, 184);
+    border-radius: 3px;
+
 }
 
-.contactar p:hover {
-
+.botonContactar p:hover {
     background-color: #ffffff;
     color: #0b5a5b;
-    box-shadow: inset 0 0 7px rgb(94, 93, 93);
+    box-shadow: inset 0 0 4px rgb(94, 93, 93);
+    border-radius: 3px;
 }
 
-/*mainContacto*/
-
-.mainContacto form {
-    width: 50%;
-    margin: 0 auto;
-    border: 2px solid white;
-}
-
-.mainContacto .formularioContact {
-    display: inline-block;
-    text-align: center;
-    margin-left: 345px;
-    margin-top: 100px;
-}
 
 /*footer*/
 
 .footer {
-    width: auto;
-    height: 110px;
-    background-color: #dadada;
+    grid-area: abajo;
+    width: 100vw;
+    height: 80px;
+    background-color: #ffffff;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #dadada;
+
 }
 
-.footer .texto__footer {
+.footer .textoFooter {
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    top: 10px;
+    display: block;
+    margin: 2px;
+}
+
+.logoFooter img {
+    width: 50px;
     position: absolute;
-    margin-top: 80px;
-    margin-left: 450px;
+    right: 10px;
+    top: 1255px;
+    
+    
+    
 }
 
 
-.logo__footer img {
-    position: absolute;
-    width: 130px;
-    margin-top: 42px;
-    margin-left: 50px;
+
+@media only screen and (min-width:480px) and (max-width:600px) {
+    .main {height: 1200px;}
+    .sectionImagen {height: 300px;}
+    .beneficiosGrids {top: 500px;}
+    .imagenContactar {height: 250px; top: 490px;}
+    .textoContactar {top: 120px;}
+    .logoFooter img {top: 1300px;}
 }
 
-.logo__footer img:hover {
-    width: 140px;
+@media only screen and (min-width:601px) and (max-width:768px) {
+    .main {height: 1350px;}
+    .sectionImagen {height: 400px;}
+    .beneficiosGrids {top: 600px; font-size: 18px; }
+    .imagenContactar {height: 280px; top: 520px;}
+    .textoContactar {top: 140px;}
+    .textoContactar .parrafoContactar {font-size: 22px;}
+    .footer .textoFooter {font-size: 16px;}
+    .logoFooter img {top: 1460px;}
 }
 
-.footer .redes__sociales {
-    display: inline-block;
-    margin-left: 1120px;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    margin-top: 55px;
-    letter-spacing: 30px;
-    font-size: 25px;
-
+@media only screen and (min-width:769px) and (max-width:1024px) {
+    .main {height: 1450px;}
+    .sectionImagen {height: 450px ;}
+    .section__text p {font-size: 20px;}
+    .section__text h1 {font-size: 20px;}
+.beneficiosGrids {grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; grid-gap: 50px; top: 750px; font-size: 17px;}
+    .beneficios {margin-top: 130px;} 
+    .imagenContactar {height: 380px; top: 395px;}
+    .textoContactar {top: 170px; font-size: 22px;}
+    .footer .textoFooter {font-size: 16px;}
+    .logoFooter img {top: 1555px; width: 80px;}
+    
 }
 
-.iconos__redes i {
-    color: rgb(0, 0, 0);
+@media only screen and (min-width:1025px) and (max-width:1160px) {
+    .main {height: 1750px;}
+    .sectionImagen {height: 670px; filter: brightness(110%);}
+    .sectionText .section__text {position: absolute; top: 120px; right: 460px; text-align: right;}
+    .section__text h1 {font-size: 40px;}
+    .section__text p {font-size: 20px;}
+    .beneficios {margin-top: 135px;}
+    .beneficiosGrids {top: 950px; grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr; grid-gap: 50px; font-size: 20px;}
+    .imagenContactar {height: 425px; top: 490px;}
+    .textoContactar {top: 240px; font-size: 25px;}
+    .textoContactar .botonContactar {font-size: 18px;}
+    .footer .textoFooter {font-size: 16px;}
+    .logoFooter img {top: 1850px; width: 80px;}
 }
 
-.iconos__redes i:hover {
-    font-size: 32px;
-    color: #0b5a5b;
+@media only screen and (min-width:1161px) and (max-width:1200px) {
+    .main {height: 1700px;}
+    .sectionImagen {height: 670px; filter: brightness(110%);}
+    .sectionText .section__text {position: absolute; top: 120px; right: 530px; text-align: right;}
+    .section__text h1 {font-size: 40px;}
+    .section__text p {font-size: 20px;}
+    .beneficios {margin-top: 135px;}
+    .beneficiosGrids {top: 900px; grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr; grid-gap: 50px; font-size: 24px;}
+    .imagenContactar {height: 455px; top: 395px;}
+    .textoContactar {top: 260px; font-size: 28px;}
+    .textoContactar .botonContactar {font-size: 18px;}
+    
+    .footer .textoFooter {font-size: 18px;}
+    .logoFooter img {top: 1800px; width: 80px;}
+}
+
+@media only screen and (min-width:1201px) and (max-width:1380px) {
+    .main {height: 1700px;}
+    .sectionImagen {height: 670px; filter: brightness(110%);}
+    .sectionText .section__text {position: absolute; top: 120px; right: 680px; text-align: right;}
+    .section__text h1 {font-size: 40px;}
+    .section__text p {font-size: 20px;}
+    .beneficios {margin-top: 135px;}
+    .beneficiosGrids {top: 950px; grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr; grid-gap: 50px; font-size: 24px;}
+    .imagenContactar {height: 455px; top: 395px;}
+    .textoContactar {top: 260px; font-size: 28px;}
+    .textoContactar .botonContactar {font-size: 18px;}
+    
+    .footer .textoFooter {font-size: 18px;}
+    .logoFooter img {top: 1800px; width: 80px;}
 }
